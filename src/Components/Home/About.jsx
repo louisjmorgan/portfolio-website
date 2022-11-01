@@ -10,7 +10,7 @@ function About({ aboutRef }) {
   const { colorMode } = useColorMode();
   return (
     <Flex
-      mt="10rem"
+      mt="7.5rem"
       direction="column"
       justify="center"
       align="center"
@@ -26,7 +26,7 @@ function About({ aboutRef }) {
         About me
       </Text>
       <Flex
-        p={[10, 20, 20, 20]}
+        p={[5, 20, 20, 20]}
         pt={[10, 10, 10, 10, 20]}
         direction={['column', 'column', 'column', 'column', 'row']}
         align={['center', 'center', 'center', 'center', 'stretch']}

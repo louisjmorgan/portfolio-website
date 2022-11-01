@@ -13,7 +13,6 @@ function NavContainer() {
   const [hasScrolled, setScrolled] = useState(false);
 
   const handleScroll = () => {
-    console.log(window.scrollY);
     if ((window.scrollY > 0)) setScrolled(true);
     else if ((window.scrollY === 0)) setScrolled(false);
   };
@@ -29,14 +28,15 @@ function NavContainer() {
       justify="space-between"
       wrap="wrap"
       w="100%"
-      p={8}
-      pb={4}
+      py={[2, 2, 4, 6]}
+      px={[4, 8]}
+      pb={[2, 4]}
       position="fixed"
-      transition="0.2s ease-out"
+      transition="background-color 0.2s ease-out"
       // bg={colorMode === 'light' ? 'background.light' : 'background.dark'}
       backgroundColor={hasScrolled
         ? colorMode === 'light' ? 'background.light' : 'background.dark'
-        : isOpen ? [colorMode === 'light' ? 'background.light' : 'background.dark', 'transparent'] : 'transparent'}
+        : isOpen ? colorMode === 'light' ? 'background.light' : 'background.dark' : 'transparent'}
       backgroundSize="300%"
       zIndex={5}
       boxShadow={hasScrolled && `0 1px 3px ${colorMode === 'light' ? 'rgba(0,0,0,0.3)' : 'rgba(0,0,0,0.3)'}`}
@@ -46,7 +46,7 @@ function NavContainer() {
     >
       <Logo />
       <MenuButton isOpen={isOpen} toggle={toggle} />
-      <Links isOpen={isOpen} />
+      <Links isOpen={isOpen} setIsOpen={setIsOpen} />
     </Flex>
   );
 }

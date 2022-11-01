@@ -10,7 +10,9 @@ import FootyStats from '../assets/footystats.png';
 const projects = [
   {
     name: 'Space Power Simulator',
-    src: SpacePower,
+    image: SpacePower,
+    live: 'https://louisjmorgan.github.io/SpaceLasers/',
+    source: 'https://github.com/louisjmorgan/SpaceLasers',
     icons: [
       {
         icon: SiReact,
@@ -32,7 +34,9 @@ const projects = [
   },
   {
     name: 'Oxygen Editor',
-    src: OxygenEditor,
+    image: OxygenEditor,
+    live: 'https://louismorgan.io/projects/oxygen-editor/',
+    source: 'https://github.com/louisjmorgan/oxygen-editor',
     icons: [{
       icon: SiReact,
       alt: 'React',
@@ -41,7 +45,9 @@ const projects = [
   },
   {
     name: 'Footy Stats',
-    src: FootyStats,
+    image: FootyStats,
+    live: 'https://louismorgan.io/projects/footystats/',
+    source: 'https://github.com/louisjmorgan/footystats',
     icons: [
       {
         icon: SiReact,

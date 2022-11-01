@@ -93,7 +93,7 @@ function AboutText() {
         ))}
       </Flex>
       <Flex
-        m={10}
+        my={10}
         justify="center"
         gap={3}
         flexWrap="wrap"

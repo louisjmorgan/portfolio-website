@@ -23,7 +23,8 @@ function Landing({ aboutRef }) {
     <Flex
       as={motion.section}
       animation={animation}
-      minHeight="100vh"
+      minHeight="50rem"
+      height="100vh"
       direction="column"
       align="center"
       justify="center"
@@ -39,10 +40,11 @@ function Landing({ aboutRef }) {
         <Text
           fontSize="3rem"
           fontWeight="bold"
+          textAlign="center"
         >
           Louis Morgan
         </Text>
-        <Text>
+        <Text textAlign={['center', 'left']}>
           I'm a freelance full-stack developer looking for permanent roles.
           I'm passionate about finding new ways to solve complex problems.
         </Text>

@@ -17,7 +17,8 @@ function OffsetBox({
       position="relative"
       backgroundColor={colorMode === 'light' ? 'background.light' : 'background.dark'}
       borderRadius="0.25rem"
-      maxWidth="75ch"
+      maxWidth={['100vw', '100vw', '75ch', '75ch', '75ch']}
+      // maxHeight={['auto', 'auto', '75vh', '75vh', '75vh']}
       width="100%"
       _before={{
         content: '""',

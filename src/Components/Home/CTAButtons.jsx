@@ -12,7 +12,7 @@ function CTAButtons({ variant }) {
   return (
     <ButtonGroup
       as={Flex}
-      m={10}
+      my={10}
       justify="space-between"
       variant={variant || 'ghost'}
       width="100%"

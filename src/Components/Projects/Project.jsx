@@ -4,7 +4,7 @@ import { ExternalLinkIcon } from '@chakra-ui/icons';
 import {
   Button,
   ButtonGroup,
-  Flex, Image, Text, useBreakpointValue, useColorMode,
+  Flex, Image, Link, Text, useBreakpointValue, useColorMode,
 } from '@chakra-ui/react';
 import { SiGithub } from 'react-icons/si';
 import TechIcon from '../Atoms/TechIcon';
@@ -13,7 +13,7 @@ import OffsetBox from '../Layout/OffsetBox';
 function Project({ project, isReverse }) {
   const { colorMode } = useColorMode();
   const shouldReverse = useBreakpointValue({
-    base: isReverse,
+    base: false,
     sm: false,
     md: false,
     lg: false,
@@ -22,16 +22,18 @@ function Project({ project, isReverse }) {
   });
   return (
     <Flex
-      p={[10, 20, 20, 20]}
+      p={[5, 20, 20, 20]}
       pt={[10, 10, 10, 10, 20]}
+      maxWidth="100vw"
       direction={['column', 'column', 'column', 'column', isReverse ? 'row-reverse' : 'row']}
       align={['center', 'center', 'center', 'center', 'center']}
-      gap={10}
+      gap={5}
     >
       <OffsetBox offset={shouldReverse ? '5%' : '-5%'}>
         <Image
-          src={project.src}
-          objectFit="contain"
+          src={project.image}
+          objectFit="cover"
+          height="100%"
           borderRadius="0.25rem"
           boxShadow={`0 5px 10px ${colorMode === 'light' ? 'rgba(0,0,0,0.3)' : 'rgba(0,0,0,0.3)'}`}
         />
@@ -57,7 +59,7 @@ function Project({ project, isReverse }) {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet tellus cras adipiscing enim eu turpis egestas pretium. Mauris nunc congue nisi vitae suscipit tellus mauris a diam. Ut aliquam purus sit amet luctus venenatis lectus magna. Ultrices in iaculis nunc sed augue lacus viverra. Purus ut faucibus pulvinar elementum integer enim neque. Urna neque viverra justo nec ultrices dui sapien eget mi. Tincidunt ornare massa eget egestas purus. Integer quis auctor elit sed vulputate. Fermentum posuere urna nec tincidunt praesent semper. Aliquam eleifend mi in nulla.
           </Text>
           <Flex
-            m={10}
+            my={10}
             justify="center"
             gap={3}
             align="center"
@@ -67,9 +69,16 @@ function Project({ project, isReverse }) {
             <Text as="span" fontWeight="bold">Stack:</Text>
             {project.icons.map((icon) => <TechIcon icon={icon} />)}
           </Flex>
-          <ButtonGroup>
-            <Button leftIcon={<ExternalLinkIcon />}>Live Site</Button>
-            <Button leftIcon={<SiGithub />}>View Source</Button>
+          <ButtonGroup
+            as={Flex}
+            direction={['column', 'row', 'row', 'row']}
+          >
+            <Button leftIcon={<ExternalLinkIcon />}>
+              <Link isExternal href={project.live}>Live Site</Link>
+            </Button>
+            <Button leftIcon={<SiGithub />}>
+              <Link isExternal href={project.source}>View Source</Link>
+            </Button>
           </ButtonGroup>
         </Flex>
       </OffsetBox>

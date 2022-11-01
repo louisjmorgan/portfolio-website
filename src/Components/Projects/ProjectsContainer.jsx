@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import {
-  Flex, Text,
+  Flex, Text, VStack,
 } from '@chakra-ui/react';
 
 import Project from './Project';
@@ -11,13 +11,17 @@ function ProjectsContainer({ title, projects }) {
       direction="column"
       align="center"
       justify="center"
+      as="section"
+      position="relative"
     >
       <Text textStyle="heading">
         {title}
       </Text>
-      {projects.map((project, index) => (
-        <Project project={project} isReverse={index % 2 === 0} />
-      ))}
+      <VStack gap={10}>
+        {projects.map((project, index) => (
+          <Project project={project} isReverse={index % 2 === 0} />
+        ))}
+      </VStack>
     </Flex>
   );
 }

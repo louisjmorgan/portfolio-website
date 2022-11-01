@@ -1,9 +1,12 @@
 /* eslint-disable react/prop-types */
-import { Box, Stack } from '@chakra-ui/react';
+import { Box, Button, Stack } from '@chakra-ui/react';
 import ColorMode from './ColorMode';
 import MenuItem from './MenuItem';
 
-function Links({ isOpen }) {
+function Links({ isOpen, setIsOpen }) {
+  const onChooseItem = (e) => {
+    setIsOpen(() => false);
+  };
   return (
     <Box
       display={{ base: isOpen ? 'block' : 'none', md: 'block' }}
@@ -12,13 +15,25 @@ function Links({ isOpen }) {
       <Stack
         spacing={8}
         align="center"
-        justify={['center', 'space-between', 'flex-end', 'flex-end']}
+        justify={['center', 'space-around', 'flex-end', 'flex-end']}
         direction={['column', 'row', 'row', 'row']}
         pt={[4, 4, 0, 0]}
       >
-        <MenuItem to="/" text="home" />
-        <MenuItem to="/projects" text="projects" />
-        <MenuItem to="/contact" text="contact" />
+        <MenuItem
+          to="/"
+          text="home"
+          onChooseItem={onChooseItem}
+        />
+        <MenuItem
+          onChooseItem={onChooseItem}
+          to="/projects"
+          text="projects"
+        />
+        <MenuItem
+          onChooseItem={onChooseItem}
+          to="/contact"
+          text="contact"
+        />
         <ColorMode />
 
       </Stack>
