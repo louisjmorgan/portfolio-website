@@ -11,6 +11,7 @@ const nextConfig = {
       '/contact/index': { page: '/contact'}
     }
   },
+  trailingSlash: true,
 }
 
 module.exports = nextConfig
