@@ -26,12 +26,12 @@ function Links({ isOpen, setIsOpen }) {
         />
         <MenuItem
           onChooseItem={onChooseItem}
-          to="/projects"
+          to="/projects/"
           text="projects"
         />
         <MenuItem
           onChooseItem={onChooseItem}
-          to="/contact"
+          to="/contact/"
           text="contact"
         />
         <ColorMode />

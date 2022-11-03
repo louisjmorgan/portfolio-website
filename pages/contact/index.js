@@ -78,20 +78,21 @@ function Contact() {
       >
         <FormLabel name="email">
           Email
-          <Input type="email" name="email" isRequired />
+          <Input type="email" name="email" required={true} />
         </FormLabel>
-        <FormLabel name="subject" isRequired>
+        <FormLabel name="subject" required={true}>
           Subject
           <Input type="text" name="subject" />
         </FormLabel>
-        <FormLabel name="message" isRequired>
+        <FormLabel name="message" required={true}>
           Message
           <Textarea name="message" />
         </FormLabel>
         <Box
           as={Button}
           m={5}
-          isExternal
+          // isexternal={true}
+          target="_blank"
           width="10ch"
           alignSelf="center"
           type="submit"
