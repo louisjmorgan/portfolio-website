@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import {
-  Flex, Text, VStack,
+  Flex, VStack,
 } from '@chakra-ui/react';
 
 import Project from './Project';

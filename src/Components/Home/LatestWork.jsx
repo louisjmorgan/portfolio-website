@@ -1,8 +1,8 @@
 import { Flex, Text } from '@chakra-ui/react';
-import ProjectsContainer from 'Components/Projects/ProjectsContainer';
 import {
   SiThreedotjs, SiChakraui, SiReact, SiD3Dotjs,
 } from 'react-icons/si';
+import ProjectsContainer from '../Projects/ProjectsContainer';
 import SpacePower from '../../assets/spacepower.png';
 
 const projects = [
