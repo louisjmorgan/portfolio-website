@@ -67,7 +67,7 @@ function Project({ project, isReverse }) {
             width="100%"
           >
             <Text as="span" fontWeight="bold">Stack:</Text>
-            {project.icons.map((icon) => <TechIcon icon={icon} />)}
+            {project.icons.map((icon) => <TechIcon key={icon.alt} icon={icon} />)}
           </Flex>
           <ButtonGroup
             as={Flex}

@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
-import { Box, Button, Stack } from '@chakra-ui/react';
+import { Box, Stack } from '@chakra-ui/react';
 import ColorMode from './ColorMode';
 import MenuItem from './MenuItem';
 
 function Links({ isOpen, setIsOpen }) {
-  const onChooseItem = (e) => {
+  const onChooseItem = () => {
     setIsOpen(() => false);
   };
   return (

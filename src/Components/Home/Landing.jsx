@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import {
-  Box, Button, Flex, Icon, Text, keyframes, Spacer, useColorMode,
+  Box, Button, Flex, Icon, Text, keyframes, useColorMode,
 } from '@chakra-ui/react';
 import { FiCornerRightDown } from 'react-icons/fi';
 import { motion } from 'framer-motion';
@@ -45,8 +45,8 @@ function Landing({ aboutRef }) {
           Louis Morgan
         </Text>
         <Text textAlign={['center', 'left']}>
-          I'm a freelance full-stack developer looking for permanent roles.
-          I'm passionate about finding new ways to solve complex problems.
+          I&apos;m a freelance full-stack developer looking for permanent roles.
+          I&apos;m passionate about finding new ways to solve complex problems.
         </Text>
       </Box>
       <CTAButtons />

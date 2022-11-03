@@ -89,7 +89,7 @@ function AboutText() {
           I use
         </Text>
         {useIcons.map((icon) => (
-          <TechIcon icon={icon} />
+          <TechIcon key={icon.alt} icon={icon} />
         ))}
       </Flex>
       <Flex
@@ -103,7 +103,7 @@ function AboutText() {
           I&apos;m learning
         </Text>
         {learningIcons.map((icon) => (
-          <TechIcon icon={icon} />
+          <TechIcon key={icon.alt} icon={icon} />
         ))}
       </Flex>
     </Flex>

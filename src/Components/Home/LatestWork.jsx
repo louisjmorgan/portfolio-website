@@ -1,3 +1,4 @@
+import { Flex, Text } from '@chakra-ui/react';
 import ProjectsContainer from 'Components/Projects/ProjectsContainer';
 import {
   SiThreedotjs, SiChakraui, SiReact, SiD3Dotjs,
@@ -7,7 +8,9 @@ import SpacePower from '../../assets/spacepower.png';
 const projects = [
   {
     name: 'Space Power Simulator',
-    src: SpacePower,
+    image: SpacePower,
+    live: 'https://louisjmorgan.github.io/SpaceLasers/',
+    source: 'https://github.com/louisjmorgan/SpaceLasers',
     icons: [
       {
         icon: SiReact,
@@ -31,7 +34,17 @@ const projects = [
 
 function LatestWork() {
   return (
-    <ProjectsContainer title="Latest Work" projects={projects} />
+    <Flex
+      direction="column"
+      justify="center"
+      align="center"
+      as="section"
+    >
+      <Text mt="2.5rem" textStyle="heading">
+        Latest Work
+      </Text>
+      <ProjectsContainer projects={projects} />
+    </Flex>
   );
 }
 

@@ -4,14 +4,11 @@ function Footer() {
   return (
     <Flex
       px={10}
-      py={3}
+      pt={5}
+      pb={2}
       justify="center"
       fontSize="0.65rem"
       color="grey"
-      position="absolute"
-      bottom={0}
-      left={0}
-      right={0}
     >
       <Text>
         © Louis Morgan 2022

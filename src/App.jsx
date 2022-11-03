@@ -4,6 +4,7 @@ import {
   Routes,
   Route,
 } from 'react-router-dom';
+import ScrollToTop from './Components/Util/ScrollToTop';
 import theme from './theme';
 import Projects from './Pages/Projects';
 import Home from './Pages/Home';
@@ -16,11 +17,13 @@ function App() {
     <ChakraProvider theme={theme} resetCSS>
       <Router>
         <Nav />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
+        <ScrollToTop>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </ScrollToTop>
         <Footer />
       </Router>
     </ChakraProvider>

@@ -10,13 +10,13 @@ function About({ aboutRef }) {
   const { colorMode } = useColorMode();
   return (
     <Flex
-      mt="7.5rem"
+      mt="5rem"
       direction="column"
       justify="center"
       align="center"
       as="section"
       ref={aboutRef}
-      scrollMarginTop="7.5rem"
+      scrollMarginTop="5rem"
       position="relative"
     >
       <Text
@@ -31,6 +31,7 @@ function About({ aboutRef }) {
         direction={['column', 'column', 'column', 'column', 'row']}
         align={['center', 'center', 'center', 'center', 'stretch']}
         gap={10}
+        overflow="hidden"
       >
         <OffsetBox
           offset="-5%"

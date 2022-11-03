@@ -28,9 +28,9 @@ function NavContainer() {
       justify="space-between"
       wrap="wrap"
       w="100%"
-      py={[2, 2, 4, 6]}
+      py={[2, 2, 4, 4]}
       px={[4, 8]}
-      pb={[2, 4]}
+      pb={2}
       position="fixed"
       transition="background-color 0.2s ease-out"
       // bg={colorMode === 'light' ? 'background.light' : 'background.dark'}

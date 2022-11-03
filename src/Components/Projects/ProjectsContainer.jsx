@@ -5,7 +5,7 @@ import {
 
 import Project from './Project';
 
-function ProjectsContainer({ title, projects }) {
+function ProjectsContainer({ projects }) {
   return (
     <Flex
       direction="column"
@@ -13,13 +13,14 @@ function ProjectsContainer({ title, projects }) {
       justify="center"
       as="section"
       position="relative"
+      overflow="hidden"
     >
-      <Text textStyle="heading">
-        {title}
-      </Text>
-      <VStack gap={10}>
+      <VStack
+        gap={10}
+        overflow="hidden"
+      >
         {projects.map((project, index) => (
-          <Project project={project} isReverse={index % 2 === 0} />
+          <Project key={project.name} project={project} isReverse={index % 2 === 0} />
         ))}
       </VStack>
     </Flex>
