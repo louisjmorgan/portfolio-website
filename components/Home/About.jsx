@@ -9,9 +9,8 @@ function About({ aboutRef }) {
   const { colorMode } = useColorMode();
   return (
     <Flex
-      mt="5rem"
+      pt="5rem"
       direction="column"
-      justify="center"
       align="center"
       as="section"
       ref={aboutRef}
@@ -25,10 +24,12 @@ function About({ aboutRef }) {
         About me
       </Text>
       <Flex
-        p={[5, 20, 20, 20]}
+        p={[5, 10, 20, 20]}
         pt={[10, 10, 10, 10, 20]}
+        width="100%"
         direction={['column', 'column', 'column', 'column', 'row']}
         align={['center', 'center', 'center', 'center', 'stretch']}
+        justify="center"
         gap={10}
         overflow="hidden"
       >

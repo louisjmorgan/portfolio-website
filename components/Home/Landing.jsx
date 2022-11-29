@@ -41,10 +41,12 @@ function Landing({ aboutRef }) {
           fontSize="3rem"
           fontWeight="bold"
           textAlign="center"
+        fontFamily={`"Arvo", sans-serif`}
+
         >
           Louis Morgan
         </Text>
-        <Text textAlign={['center', 'left']}>
+        <Text textAlign={'center'}>
           I&apos;m a freelance full-stack developer looking for permanent roles.
           I&apos;m passionate about finding new ways to solve complex problems.
         </Text>

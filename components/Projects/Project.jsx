@@ -31,6 +31,7 @@ function Project({ project, isReverse }) {
     >
       <OffsetBox offset={shouldReverse ? '5%' : '-5%'}>
         <Image
+          alt={project.title}
           src={project.image}
           objectFit="cover"
           height="100%"
@@ -55,9 +56,7 @@ function Project({ project, isReverse }) {
           >
             {project.name}
           </Text>
-          <Text>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet tellus cras adipiscing enim eu turpis egestas pretium. Mauris nunc congue nisi vitae suscipit tellus mauris a diam. Ut aliquam purus sit amet luctus venenatis lectus magna. Ultrices in iaculis nunc sed augue lacus viverra. Purus ut faucibus pulvinar elementum integer enim neque. Urna neque viverra justo nec ultrices dui sapien eget mi. Tincidunt ornare massa eget egestas purus. Integer quis auctor elit sed vulputate. Fermentum posuere urna nec tincidunt praesent semper. Aliquam eleifend mi in nulla.
-          </Text>
+          {project.description}
           <Flex
             my={10}
             justify="center"

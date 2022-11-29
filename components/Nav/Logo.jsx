@@ -7,12 +7,12 @@ function Logo() {
       as={Link}
       href="/"
       w="100px"
-      m={5}
       // color={['white', 'white', 'primary.500', 'primary.500']}
     >
       <Text
         fontSize="lg"
         fontWeight="bold"
+        fontFamily={`"Arvo", sans-serif`}
       >
         LM
       </Text>
