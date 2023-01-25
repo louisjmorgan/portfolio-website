@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import {
-  Flex, Img, Text, useColorMode,
+  Flex, Hide, Img, Text, useColorMode,
 } from '@chakra-ui/react';
 import OffsetBox from '../Layout/OffsetBox';
 import AboutText from './AboutText';
@@ -14,11 +14,11 @@ function About({ aboutRef }) {
       align="center"
       as="section"
       ref={aboutRef}
-      scrollMarginTop="5rem"
+      scrollMarginTop="0rem"
       position="relative"
     >
       <Text
-        mt="2.5rem"
+        // mt="2.5rem"
         textStyle="heading"
       >
         About me
@@ -33,6 +33,7 @@ function About({ aboutRef }) {
         gap={10}
         overflow="hidden"
       >
+        <Hide below="lg">
         <OffsetBox
           offset="-5%"
         >
@@ -45,6 +46,7 @@ function About({ aboutRef }) {
             boxShadow={`0 5px 10px ${colorMode === 'light' ? 'rgba(0,0,0,0.3)' : 'rgba(0,0,0,0.3)'}`}
           />
         </OffsetBox>
+        </Hide>
         <OffsetBox
           offset="5%"
         >

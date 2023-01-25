@@ -10,7 +10,7 @@ const projects = [
   {
     name: 'Space Power Simulator',
     image: '/spacepower.png',
-    live: 'https://louisjmorgan.github.io/SpaceLasers/',
+    live: 'https://simulator.space-power.com/',
     source: 'https://github.com/louisjmorgan/SpaceLasers',
     description:
     <Flex direction="column" gap={5}>

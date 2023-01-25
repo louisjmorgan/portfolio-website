@@ -30,7 +30,7 @@ function CTAButtons({ variant }) {
           as={IoCodeSlashOutline}
         />
       </Button>
-      <Button>
+      <Button as={Link} href="/Louis_Morgan_CV.pdf">
         CV
         <Icon
           ml={2}
